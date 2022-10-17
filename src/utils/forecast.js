@@ -14,7 +14,8 @@ const foreCast = ({ lat, long }, callback) => {
         if (err) {
             return callback('Unable to find weather service', undefined, undefined)
         } else if (!current) {
-            return callback('Unable to find weather location', undefined, undefined)
+
+            return callback('Unable to find weather location : ' + resp.body.error.info, undefined, undefined)
         } else {
             const celcius = current.temperature
             const fahr = celcius * 1.8 + 32
