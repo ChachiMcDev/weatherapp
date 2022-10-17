@@ -1,11 +1,16 @@
 {
   "name": "webserver",
   "version": "1.0.0",
+  "engines": {
+    "npm": "6.x",
+    "node": "10.x"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
+  "heroku-run-build-script": true,
   "author": "",
   "license": "ISC",
   "dependencies": {
